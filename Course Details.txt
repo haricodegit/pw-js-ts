@@ -1,0 +1,101 @@
+Playwright Official website and Documentation:-
+
+https://playwright.dev/
+
+-------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/playwright-tutorials-automation-testing/
+
+Course Name: Playwright JS Automation Testing from Scratch with Framework
+
+Description: Playwright -Modern Testing tool for reliable Web Automation. Support API calls with in UI tests for Smarter Automation.
+
+Created by: Rahul Shetty
+
+-----------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/cypress-io-master-class/
+
+Course Name: The Complete Cypress v12 Course: From Zero to Expert! [2024]
+
+Description: The most detailed and complete Cypress course on sale. Write Automated UI &amp; API test scripts using an e-commerce store.
+
+Created by: Gianni@FutureSkillzAcademy
+
+-----------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/webdriverio-tutorial-nodejs-javascript/
+
+Course Name: WebDriverIO + Node.js -JavaScript UI Automation from Scratch
+
+Description: Top class tutorial on WebDriverIO ( Selenium JavaScript) Automation Testing from basics to Framework including JS Basics
+
+Created by: Rahul Shetty
+
+-----------------------------------------------------------------------------------------
+
+
+URL: https://www.udemy.com/course/cypress-tutorial/
+
+Course Name: Cypress -Modern Automation Testing from Scratch + Frameworks
+
+Description: Learn writing fast and robust Automated (UI + Integration) Tests using Cypress V13 with Mocha and Cucumber frameworks
+
+Created by: Rahul Shetty
+
+-----------------------------------------------------------------------------------------
+
+Check JavaScript programming courses on Udemy
+
+-----------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/playwright-from-zero-to-hero/
+
+Course Name: Playwright: Web Automation Testing From Zero to Hero
+
+Description: Complete Playwright test automation course with TypeScript. Best practices, API testing, Page Objects, Advanced features
+
+Created by: Artem Bondar
+
+-----------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/getting-started-with-playwright/
+
+Course Name: Getting Started in Web Automation Using Playwright
+
+Description: Mastering Modern Web Automation: A Comprehensive Guide to JS Playwright and Using AI, and GPT-4 Model in Testing
+
+Created by: Laurentiu Raducu
+
+-----------------------------------------------------------------------------------------
+
+URL: https://www.udemy.com/course/javascript-and-nodejs-essentials-for-test-automation/
+
+Course Name: JavaScript & Node.js course for Testers, QA and SDETs - 2024
+
+Description: A tool independent JavaScript and Node.js course, specifically designed for Test Engineers, QAs and SDETs for Automation
+
+Created by: Cope Automation
+
+-----------------------------------------------------------------------------------------
+
+YouTube Materials
+
+***PLAYLIST having 37 Videos***
+JavaScript for Absolute Beginners - By Naveen Automation Labs
+https://www.youtube.com/watch?v=vt5mq6yZScQ&list=PLFGoYjJG_fqqJC5ODNTPLhv5MUKVkYakh
+
+***PLAYLIST having 15 Videos***
+TypeScript for Absolute Beginners (SDE/SDET) - Naveen Automation Labs 
+https://www.youtube.com/watch?v=GrL86rlRvpA&list=PLFGoYjJG_fqrJhP46MFDAEeLjCwaIcT_t
+
+***PLAYLIST having 8 Videos***
+Playwright with TypeScript [Latest 2024] - By Naveen Automation Labs
+https://www.youtube.com/playlist?list=PLFGoYjJG_fqrRjl9Mn0asiAIxmKC1X-N-
+
+
+---------------------------------------------------------------------------------------
+Playwright - GITHUB
+https://github.com/microsoft/playwright
+
+---------------------------------------------------------------------------------------
