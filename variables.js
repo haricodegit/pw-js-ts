@@ -10,3 +10,4 @@ var browser = 'Chrome'
 var browser = 'Firefox'
 
 console.log(browser)
+test()
