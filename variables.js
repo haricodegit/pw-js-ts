@@ -53,3 +53,6 @@ console.log(mg)
 const days = 7;
 //days = 10;
 console.log(100 * days)
+
+const con = 31;
+console.log(con)
