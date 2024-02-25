@@ -4,7 +4,7 @@
 console.log('Hello, World!')
 
 //2. Using alert() on browser window
-alert('Hello, World!')
+//alert('Hello, World!')
 
 //3. Using document.write()
 document.write('Hello, World!')
