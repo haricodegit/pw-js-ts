@@ -87,6 +87,8 @@ https://www.youtube.com/watch?v=vt5mq6yZScQ&list=PLFGoYjJG_fqqJC5ODNTPLhv5MUKVkY
 
 Theory JavaScript Tutorial - https://www.w3schools.com/js/default.asp
 
+Example programs: https://www.programiz.com/javascript/examples
+
 ***PLAYLIST having 15 Videos***
 TypeScript for Absolute Beginners (SDE/SDET) - Naveen Automation Labs 
 https://www.youtube.com/watch?v=GrL86rlRvpA&list=PLFGoYjJG_fqrJhP46MFDAEeLjCwaIcT_t
