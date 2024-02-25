@@ -85,10 +85,15 @@ YouTube Materials
 JavaScript for Absolute Beginners - By Naveen Automation Labs
 https://www.youtube.com/watch?v=vt5mq6yZScQ&list=PLFGoYjJG_fqqJC5ODNTPLhv5MUKVkYakh
 
+Theory JavaScript Tutorial - https://www.w3schools.com/js/default.asp
+
 ***PLAYLIST having 15 Videos***
 TypeScript for Absolute Beginners (SDE/SDET) - Naveen Automation Labs 
 https://www.youtube.com/watch?v=GrL86rlRvpA&list=PLFGoYjJG_fqrJhP46MFDAEeLjCwaIcT_t
 
+Theory TypeScript Tutorial - https://www.w3schools.com/typescript/index.php
+
+---------------------------------------------------------------------------------------
 ***PLAYLIST having 8 Videos***
 Playwright with TypeScript [Latest 2024] - By Naveen Automation Labs
 https://www.youtube.com/playlist?list=PLFGoYjJG_fqrRjl9Mn0asiAIxmKC1X-N-
@@ -98,4 +103,8 @@ https://www.youtube.com/playlist?list=PLFGoYjJG_fqrRjl9Mn0asiAIxmKC1X-N-
 Playwright - GITHUB
 https://github.com/microsoft/playwright
 
+---------------------------------------------------------------------------------------
+W3schools
+JavaScript Tutorial - https://www.w3schools.com/js/default.asp
+TypeScript Tutorial - https://www.w3schools.com/typescript/index.php
 ---------------------------------------------------------------------------------------
