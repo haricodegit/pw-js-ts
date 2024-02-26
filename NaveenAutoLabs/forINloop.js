@@ -16,4 +16,30 @@ function getPersonDetails(person, req) {
     }
 }
 
+console.log();
+console.log('another way of For in loop')
 
+//Defining an object in Javascript
+
+const user = {
+    username: 'Peter', 
+    lastname: 'Jin', 
+    age: 30, 
+    city: 'New York'}
+let checkkey = 'lastname';
+//let element = '';
+
+    for (const key1 in user) {
+        if (user.hasOwnProperty.call(user, key1)) {
+            const element1 = user[key1];
+            console.log(key1+" is "+element1);
+        }
+    }
+
+console.log()
+    for (const key in user) {
+        if (key == checkkey) {
+            const element = user[key];
+            console.log(key+ ' is '+element)
+        }
+    }

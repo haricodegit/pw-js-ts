@@ -18,3 +18,15 @@ function normalforloop(array) {
     }
 }
 
+console.log();
+const browser = ['Chrome', 'Firefox', 'Edge', 'Internet Explorer', 'Opera', 'Safari'];
+//For Of loop
+let b = 'Firefox';
+for (const e of browser) {
+    //array.forEach(element => {
+        console.log(e);
+        if(e == b) {
+            console.log('Launch '+b+' browser');
+            break;
+        }
+    };
