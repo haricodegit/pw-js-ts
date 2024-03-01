@@ -58,3 +58,53 @@ console.log(generate.next().value);
 console.log(generate.next().value);
 console.log(generate.next().value);
 console.log(generate.next().value);
+
+
+//7. Annonymous function
+//no specific name
+
+const numbers = [1,2,3,4,5];
+
+const squareNumbers = numbers.map(function(e) {
+    return e * e;
+});
+
+console.log("squareNumbers: "+squareNumbers);
+
+const numb = [1,2,3,4,5];
+const sqrtnumb = numb.map((e) => {
+    return e * e;
+});
+
+console.log('sqrtnumb: '+sqrtnumb);
+
+//8. Recursive function
+//Factorial of a number
+
+function factorial(n) {
+    if(n == 0 || n == 1) {
+        return 1;
+    }
+    else {
+        return n * factorial(n-1);
+    }
+}
+
+console.log('factorial: '+factorial(5));
+
+//9. Higher-Order function
+
+function addition(a, b){
+    return a + b;
+}
+
+function multiplication(a, b){
+    return a * b;
+}
+
+function operate(funcName, a, b) {
+    return funcName(a, b);
+}
+
+const s = operate(multiplication, 4, 5);
+console.log('Higher Order function - Sum/Multiplication: '+s)
