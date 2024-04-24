@@ -51,9 +51,21 @@ test('New User Creation', async()=>{
     const checkBox: Locator = await page.locator("//input[@name='agree']");
     const contn: Locator = await page.locator("//input[@value='Continue']");
 
+    const characters ='ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+    function generateString(length:number) {
+    let result = '';
+    const charactersLength = characters.length;
+    for ( let i = 0; i < length; i++ ) {
+        result += characters.charAt(Math.floor(Math.random() * charactersLength));
+    }
+    console.log("generateString: ",result);
+    return result;
+}
+
     await firstName.fill("Suresh")
     await lastName.fill("Kumar")
-    await emailID.fill("Sureeesh.kumarrr93@gmail.com")
+    await emailID.fill(generateString(5)+"@gmail.com")
     await telePhone.fill("9988776655");
     await password.fill("Welcome@123")
     await confirmPassword.fill("Welcome@123")
