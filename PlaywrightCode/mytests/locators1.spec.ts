@@ -20,7 +20,7 @@ import { test, expect, Browser, Page, Locator, webkit, chromium, firefox } from 
 //import (webkit, chromium, firefox) from 
 
 test('Locators 1', async()=> {
-    const browser: Browser = await chromium.launch({headless: false, channel: 'chrome'});
+    const browser: Browser = await chromium.launch({headless: true, channel: 'chrome'});
     const page: Page = await browser.newPage();
     await page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/register");
 

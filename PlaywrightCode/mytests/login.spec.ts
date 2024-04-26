@@ -2,7 +2,7 @@ import {test, expect, Browser, Page, Locator} from '@playwright/test'
 import {webkit, chromium, firefox} from 'playwright'
 
 test('login test', async()=>{
-    const browser: Browser = await chromium.launch({headless: false, channel: 'chrome'});
+    const browser: Browser = await chromium.launch({headless: true, channel: 'chrome'});
     const page: Page = await browser.newPage();
     await page.goto("https://naveenautomationlabs.com/opencart/index.php?route=account/login")
 
@@ -13,6 +13,8 @@ test('login test', async()=>{
     await emailId.fill("r.ramesh@gmail.com");
     await password.fill("Welcome@123");
     await loginBtn.click();
+
+    await expect(page.getByRole('link', {name: 'Edit your account information'})).toBeVisible();
 
     const title = await page.title();
     console.log("Page Title: ",title)

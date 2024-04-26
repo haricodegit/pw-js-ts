@@ -39,6 +39,10 @@ test("browser context" ,async()=>{
     await password2.fill('Welcome@123');
     await loginBtn2.click();
 
+    await expect(page2.getByRole('link', {name: 'Edit your account information'})).toBeVisible();
+
+    // await page2.
+
     const title2:string = await page2.title();
     console.log("Page2 Title",title2);
 
