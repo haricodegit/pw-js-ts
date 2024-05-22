@@ -21,6 +21,7 @@ test('Calender Date picker', async({page}) => {
     for(let index=0; index < await items.count(); index++) {
         // await expect(page.locator(".react-date-picker__inputGroup .react-date-picker__inputGroup__input").nth(index)).toHaveAttribute('value', arr[index]);
         await expect(items.nth(index)).toHaveAttribute('value', arr[index]);
+        console.log(arr[index]);
         
     }
 })
