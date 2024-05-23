@@ -1,6 +1,7 @@
 const {test, expect} = require('@playwright/test');
+const { request } = require('http');
 
-test('Test case name here', async({browser}) => {
+test.only('Test case name here', async({browser}) => {
     const context = await browser.newContext();
     const page = await context.newPage();
 
@@ -9,7 +10,10 @@ test('Test case name here', async({browser}) => {
     const loginBtn = page.locator('#signInBtn');
     const items = page.locator('div.card-body a');
     // const allItems = page.locator('div.card-body');
-
+    // await page.route('**/*.css', route=> route.abort())
+    await page.route('**/*.{jpg, jpeg, png}',route=> route.abort())
+    page.on('request', request=> console.log(request.url()));
+    page.on('response', Response=> console.log(Response.url(), Response.status()))
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     // console.log(await page.title());
     expect(page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
