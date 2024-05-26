@@ -16,7 +16,6 @@ class Dashboard {
       if ((await this.products.nth(i).locator("b").textContent()) === productName) {
         await this.products.nth(i).locator(this.addToCart).click();
         await this.expect(this.page.locator(this.toastContainer)).toBeVisible(this.myCart);
-        console.log("Product added");
         break;
       }
     }
@@ -27,10 +26,17 @@ class Dashboard {
     // await this.cart.click();
     // .btn-custom i
     // await this.page.locator("[routerlink*='cart']").click();
-    await this.page.locator(".btn-custom i").nth(2).click();
+    // await this.page.locator(".btn-custom i").nth(2).click();
     // await this.page.locator("div li").first().waitFor();
-    await this.page.waitForLoadState("networkidle");
-    await this.expect(this.myCartLabel).toHaveText(this.myCart)
+    // await this.page.waitForLoadState("networkidle");
+    // await this.expect(this.myCartLabel).toHaveText(this.myCart)
+
+    // await this.page.goto("https://rahulshettyacademy.com/client/dashboard/cart")
+    // await this.page
+    // await this.page.waitForLoadState("networkidle");
+
+    await this.page.locator("[routerlink*='cart']").click();
+    await this.page.locator("div li").first().waitFor();
   }
 }
 

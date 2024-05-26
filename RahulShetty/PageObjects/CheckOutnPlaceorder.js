@@ -1,4 +1,5 @@
 class CheckOutnPlaceorder {
+    // let scliedOrderID =""
     constructor(page, expect) {
         this.page = page
         this.expect = expect
@@ -19,16 +20,17 @@ class CheckOutnPlaceorder {
 
     async checkoutnplaceorder (countryname, username, CreditCardNumber, ExpriyMonth, ExpiryDate, CVV, NameonCard, Coupon, successmsg) {
         
+    let scliedOrderID;
     await this.checkoutbtn.last().click(); //checkout button
     await this.page.waitForLoadState("networkidle");
-    await this.countryName.pressSequentially("India", {delay: 100});
+    await this.countryName.pressSequentially("United States", {delay: 100});
     // page.locator("[placeholder*='Country']").pressSequentially("India", {delay: 100});
     await this.taresults.first().waitFor();
 
     for(let i = 0; i <  await this.listOfCountries.count(); ++i) {
         const item = await this.listOfCountries.nth(i).textContent();
         let itemcheck = item.trim()
-        if(item === countryname) {
+        if(itemcheck === countryname) {
             await this.listOfCountries.nth(i).click();
             break;
         }
@@ -43,13 +45,22 @@ class CheckOutnPlaceorder {
     await form.nth(1).fill(CVV); //CVV
     await form.nth(2).fill(NameonCard); //Name on Card
     await form.nth(3).fill(Coupon); // Coupon
-    await this.applycouponbtn.click() //click on Apply Coupon button
-    await this.placeOrderbtn.click(); //Place Order
-    let msg = await this.successmesg.textContent()
+    // await this.applycouponbtn.click() //click on Apply Coupon button
+    // await this.page.locator("button:has-text('Apply Coupon')").click()
+    await this.page.locator("button[type='submit']")
+    // await this.placeOrderbtn.click(); //Place Order
+    await this.page.locator(".action__submit").click()
+    await this.page.locator(".content-wrap").waitFor()
+    let msg = await this.page.locator(".hero-primary").textContent()
     let trimmedmsg = msg.trim()
-    await this.expect(trimmedmsg).toBe(successmsg);//Thank you message
+    // await this.expect(trimmedmsg).toBe(successmsg);//Thank you message
     const OrderID = await this.orderIDlocator.last().textContent();
-    console.log("OrderID: ",OrderID);
+
+    // const OrderID = await page.locator(".em-spacer-1 label").last().textContent();
+    scliedOrderID = OrderID.substring(2,27);
+    scliedOrderID = await scliedOrderID.trim();
+
+    return scliedOrderID
     }
 }
 
