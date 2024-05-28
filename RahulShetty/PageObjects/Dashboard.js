@@ -11,6 +11,7 @@ class Dashboard {
   }
 
   async searchProductAddtoCart(productName) {
+    this.page.goto("https://rahulshettyacademy.com/client/")
     await this.products.last().waitFor();
     for (let i = 0; i < (await this.products.count()); ++i) {
       if ((await this.products.nth(i).locator("b").textContent()) === productName) {

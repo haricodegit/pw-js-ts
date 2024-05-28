@@ -31,27 +31,40 @@ module.exports = defineConfig({
     // baseURL: 'http://127.0.0.1:3000',
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
-    trace: 'on-first-retry',
-    headless: false,
-    screenshot: 'only-on-failure',
+
   },
 
   /* Configure projects for major browsers */
   projects: [
-    // {
-    //   name: 'chromium',
-    //   use: { ...devices['Desktop Chrome'] },
-    // },
+    {
+      name: 'chromium',
+      use: { ...devices['Desktop Chrome'],
+      trace: 'on',
+      viewport: {width: 720, height: 720},
+      // ...devices['Pixel 4a (5G)'],
+      ignoreHTTPSErrors: true,
+      permissions: ['geolocation'],
+      headless: false,
+      screenshot: 'on',
+      video: 'retain-on-failure',
+      }
+      
+    },
 
     // {
     //   name: 'firefox',
     //   use: { ...devices['Desktop Firefox'] },
     // },
 
-    // {
-    //   name: 'webkit',
-    //   use: { ...devices['Desktop Safari'] },
-    // },
+    {
+      name: 'webkit',
+      use: { ...devices['Desktop Safari'],
+      trace: 'on-first-retry',
+      headless: false,
+      ...devices['iPhone 11 Pro'],
+      screenshot: 'only-on-failure',
+       },
+    },
 
     /* Test against mobile viewports. */
     // {
@@ -68,11 +81,11 @@ module.exports = defineConfig({
     //   name: 'Microsoft Edge',
     //   use: { ...devices['Desktop Edge'], channel: 'msedge' },
     // },
-    {
-      name: 'Google Chrome',
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' },
-    },
-  ],
+  //   {
+  //     name: 'Google Chrome',
+  //     use: { ...devices['Desktop Chrome'], channel: 'chrome' },
+  //   },
+  // ],
 
   /* Run your local dev server before starting the tests */
   // webServer: {
@@ -80,4 +93,4 @@ module.exports = defineConfig({
   //   url: 'http://127.0.0.1:3000',
   //   reuseExistingServer: !process.env.CI,
   // },
-});
+]});

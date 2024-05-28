@@ -14,6 +14,8 @@ test("Clean Up Orders Page", async({page}) => {
     await page.waitForLoadState('networkidle')
     const itemsToDelete = page.locator(".table-bordered .ng-star-inserted .btn-danger");
     const table = page.locator(".table-bordered")
+    const OrderIds	 = page.locator("tbody tr th");
+    const rowData = page.locator("tbody tr")
     const itemCount = await itemsToDelete.count();
     console.log("itemCount ",itemCount);
     const flag = await table.isVisible()
@@ -21,10 +23,17 @@ test("Clean Up Orders Page", async({page}) => {
     if(flag)
     {
     await table.waitFor();
-    for (let j = 0; j < itemCount; ++j)
+    while (await rowData.count() > 0 )
     {
+        // console.log("rowData.count()", await rowData.count());
+        console.log(await rowData.nth(0).textContent());
         await itemsToDelete.nth(0).click()
-        console.log(await products.nth(j).locator("b").textContent());
+        // const responsePromise = page.waitForResponse("https://rahulshettyacademy.com/api/ecom/order/delete-order/*")
+        await page.waitForTimeout(300)
+        // await page.waitForLoadState('load')
+        // console.log(await products.nth(0).textContent());
+        // const response = await responsePromise
+        // console.log("response ", response);
     }
     } else {
     console.log("Order page is empty.. No Items to delete!");
