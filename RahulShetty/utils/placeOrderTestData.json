@@ -1,0 +1,80 @@
+[
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "ZARA COAT 3",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    },
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "ADIDAS ORIGINAL",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    },
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "IPHONE 13 PRO",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    },
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "IPhone 15 Pro Max",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    },
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "Product 1",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    },
+    {
+      "username": "resttassuredd@gmail.com",
+      "password": "Welcome@123",
+      "productName": "Product 2",
+      "countryname": "United States",
+      "CreditCardNumber": "1111 2222 3333 4444",
+      "ExpriyMonth": "12",
+      "ExpiryDate": "31",
+      "CVV": "154",
+      "NameonCard": "Ramesh Kumar",
+      "Coupon": "rahulshettyacademy",
+      "successmsg": "Thankyou for the order."
+    }
+  ]

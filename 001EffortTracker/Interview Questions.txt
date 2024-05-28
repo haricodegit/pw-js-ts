@@ -1,0 +1,17 @@
+Few websites that has interview questions
+
+rahulshettyacademy: (55 Questions)
+https://rahulshettyacademy.com/blog/index.php/2023/06/29/playwright-interview-questions/
+
+letzdotesting: (40 Questions)
+https://letzdotesting.com/top-40-playwright-interview-questions-answers/#google_vignette
+
+vskills: (105 Questions)
+https://www.vskills.in/interview-questions/playwright-interview-questions#google_vignette
+
+lambdatest: (25 Questions)
+https://www.lambdatest.com/learning-hub/playwright-interview-questions
+
+Total: 225 Questions
+
+

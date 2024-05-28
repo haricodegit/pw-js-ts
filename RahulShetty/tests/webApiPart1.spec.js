@@ -1,6 +1,6 @@
 const { test, expect, request } = require('@playwright/test');
 const exp = require('constants');
-const {ApiUtils} = require('./utils/ApiUtils')
+const {ApiUtils} = require('../utils/ApiUtils')
 const loginPayload = {userEmail:"resttassuredd@gmail.com",userPassword:"Welcome@123"}
 const createOrderPayload = {orders:[{country:"United States",productOrderedId:"65c9cafda86f8f74dc75e4a9"}]} //IPHONE 15 PRO MAX
 

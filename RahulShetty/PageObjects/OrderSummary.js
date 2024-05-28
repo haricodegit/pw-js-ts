@@ -5,7 +5,7 @@ class OrderSummary {
     this.Ordersbtn = "[routerlink*=myorders]";
   }
 
-  async verifyOrderSummary(orderID) {
+  async verifyOrderSummary(orderID, productName) {
     await this.page.locator("[routerlink*=myorders]").first().click();
     await this.page.locator(".table-bordered").waitFor();
     const table = this.page.locator(".table-bordered .ng-star-inserted");
@@ -26,7 +26,7 @@ class OrderSummary {
     await this.page.locator(".email-wrapper").first().waitFor();
     this.expect(this.page.locator(".-main").first()).toHaveText(orderID);
     this.expect(this.page.locator(".address p").first()).toHaveText(" resttassuredd@gmail.com ");
-    this.expect(this.page.locator(".artwork-card-info .title")).toHaveText(" ADIDAS ORIGINAL ");
+    this.expect(this.page.locator(".artwork-card-info .title")).toHaveText(" "+productName+" ");
   }
 }
 

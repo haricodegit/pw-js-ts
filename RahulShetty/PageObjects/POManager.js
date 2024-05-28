@@ -3,6 +3,8 @@ const { Dashboard } = require("../PageObjects/Dashboard");
 const { CheckOutnPlaceorder } = require("../PageObjects/CheckOutnPlaceorder");
 const { OrderSummary } = require("../PageObjects/OrderSummary");
 
+ //OrdersCleanUp
+ //ordersCleanUp
 class POManager {
   constructor(page, expect) {
     this.page = page;
@@ -28,6 +30,7 @@ class POManager {
   getordersummary() {
     return this.ordersummary;
   }
+  
 }
 
 module.exports = { POManager };
