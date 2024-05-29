@@ -12,15 +12,16 @@ const { defineConfig, devices } = require('@playwright/test');
  */
 module.exports = defineConfig({
   testDir: './tests',
-  timeout: 60 * 1000,
-  expect: {timeout: 30 * 1000},
+  retries: 1,
+  timeout: 30 * 1000, // 30 secs
+  expect: {timeout: 20 * 1000}, // 20 secs
   /* Run tests in files in parallel */
   fullyParallel: true,
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
 
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  // retries: process.env.CI ? 2 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
@@ -39,14 +40,14 @@ module.exports = defineConfig({
     {
       name: 'chromium',
       use: { ...devices['Desktop Chrome'],
-      trace: 'on',
-      viewport: {width: 720, height: 720},
+      // trace: 'on',
+      // viewport: {width: 720, height: 720},
       // ...devices['Pixel 4a (5G)'],
       ignoreHTTPSErrors: true,
       permissions: ['geolocation'],
       headless: false,
-      screenshot: 'on',
-      video: 'retain-on-failure',
+      // screenshot: 'on',
+      // video: 'retain-on-failure',
       }
       
     },

@@ -1,6 +1,6 @@
 const {test, expect} = require('@playwright/test')
 
-test('Calender Date picker', async({page}) => {
+test('@Web Calender Date picker', async({page}) => {
 
     const month = "6"
     const date ="15"
@@ -22,6 +22,5 @@ test('Calender Date picker', async({page}) => {
         // await expect(page.locator(".react-date-picker__inputGroup .react-date-picker__inputGroup__input").nth(index)).toHaveAttribute('value', arr[index]);
         await expect(items.nth(index)).toHaveAttribute('value', arr[index]);
         console.log(arr[index]);
-        
     }
 })

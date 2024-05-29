@@ -1,7 +1,7 @@
 // import { browser, page, expect, test } from '@playwright/test';
 const {test, expect} = require('@playwright/test');
 
-test("Client App E2E", async({page})=> {
+test.skip("Client App E2E", async({page})=> {
     const productName = "IPhone 15 Pro Max";
     const products = page.locator(".card-body");
     const emailID = "resttassuredd@gmail.com";

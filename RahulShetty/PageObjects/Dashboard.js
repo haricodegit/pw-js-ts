@@ -38,6 +38,7 @@ class Dashboard {
 
     await this.page.locator("[routerlink*='cart']").click();
     await this.page.locator("div li").first().waitFor();
+    // await this.page.waitForLoadState("networkidle");
   }
 }
 

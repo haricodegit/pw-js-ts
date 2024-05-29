@@ -1,6 +1,6 @@
 const { test, expect, request } = require("@playwright/test");
 const exp = require("constants");
-const { ApiUtils } = require("./utils/ApiUtils");
+const { ApiUtils } = require("../utils/ApiUtils");
 const loginPayload = {
   userEmail: "resttassuredd@gmail.com",
   userPassword: "Welcome@123",
@@ -27,9 +27,7 @@ test("Client App E2E", async ({ page }) => {
 
   await page.goto("https://rahulshettyacademy.com/client");
 
-  await page.route(
-    "https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*",
-    async (route) => {
+  await page.route("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*", async (route) => {
       const realResponse = await page.request.fetch(route.request());
       let body = JSON.stringify(requestFakeBody);
       route.fulfill({
@@ -41,8 +39,6 @@ test("Client App E2E", async ({ page }) => {
 
   await page.locator("[routerlink*=myorders]").click();
   // await page.pause()
-  await page.waitForResponse(
-    "https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*"
-  );
+  await page.waitForResponse("https://rahulshettyacademy.com/api/ecom/order/get-orders-for-customer/*");
   console.log(await page.locator(".mt-4").textContent());
 });

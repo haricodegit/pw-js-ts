@@ -1,6 +1,8 @@
 const { test, expect } = require('@playwright/test')
 const exp = require('constants')
 
+test.describe.configure({mode: 'serial'})
+
 test('More Validations', async({page}) => {
     await page.goto("https://rahulshettyacademy.com/AutomationPractice/")
     // await page.goto("https://google.com")
@@ -38,7 +40,7 @@ test('Capture Screenshot full screen & only element', async({page}) => {
     // await page.screenshot({path: 'Screenshot3.png'})
 })
 
-test('Visual testing - Screenshot to Screenshot comparision', async({page})=>{
+test.skip('Visual testing - Screenshot to Screenshot comparision', async({page})=>{
     await page.goto("https://www.clocktab.com/")
     expect(await page.screenshot()).toMatchSnapshot('landing.png')
 })

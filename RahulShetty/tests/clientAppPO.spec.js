@@ -46,7 +46,7 @@ test(`Client App Page Object Impl for product ${data.productName}`, async({page}
 }) 
 }
 
-customtest.only(`Client App - Test Data Fixture`, async({page, DataForOrders})=> {
+customtest(`Client App - Test Data Fixture`, async({page, DataForOrders})=> {
 
     await page.addInitScript(value => {
         window.localStorage.setItem('token', value);

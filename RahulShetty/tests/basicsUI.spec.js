@@ -1,7 +1,7 @@
 const {test, expect} = require('@playwright/test');
 const { request } = require('http');
 
-test.only('Test case name here', async({browser}) => {
+test('Test case name here', async({browser}) => {
     const context = await browser.newContext();
     const page = await context.newPage();
 
@@ -45,13 +45,13 @@ test.only('Test case name here', async({browser}) => {
 
 });
 
-test('4 Fixtures test', async({ page }) => {
+test('@Web 4 Fixtures test', async({ page }) => {
     await page.goto("https://www.google.com/");
     console.log(await page.title());
     await expect(page).toHaveTitle("Google");
 });
 
-test('UI Controls', async({page})=> {
+test('@Web UI Controls', async({page})=> {
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");
     const dropdown = page.locator("select.form-control");
     const radioBtn = page.locator("span.radiotextsty");
@@ -75,7 +75,7 @@ test('UI Controls', async({page})=> {
     await expect(page.locator(docLink)).toHaveAttribute("class", "blinkingText");
 });
 
-test("@child window handles", async({browser})=> {
+test("@Child window handles", async({browser})=> {
     const context = await browser.newContext();
     const page = await context.newPage();
     await page.goto("https://rahulshettyacademy.com/loginpagePractise/");

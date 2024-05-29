@@ -24,9 +24,9 @@ class OrderSummary {
       }
     }
     await this.page.locator(".email-wrapper").first().waitFor();
-    this.expect(this.page.locator(".-main").first()).toHaveText(orderID);
-    this.expect(this.page.locator(".address p").first()).toHaveText(" resttassuredd@gmail.com ");
-    this.expect(this.page.locator(".artwork-card-info .title")).toHaveText(" "+productName+" ");
+    await this.expect(this.page.locator(".-main").first()).toHaveText(orderID);
+    await this.expect(this.page.locator(".address p").first()).toHaveText(" resttassuredd@gmail.com ");
+    await this.expect(this.page.locator(".artwork-card-info .title")).toHaveText(" "+productName+" ");
   }
 }
 
