@@ -15,7 +15,7 @@ module.exports = defineConfig({
   timeout: 60 * 1000,
   expect: {timeout: 30 * 1000},
   /* Run tests in files in parallel */
-  fullyParallel: true,
+  fullyParallel: false,
   retries: 2,
   /* Define number of workers required */
   // workers: 2,

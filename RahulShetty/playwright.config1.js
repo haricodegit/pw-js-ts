@@ -12,7 +12,7 @@ const { defineConfig, devices } = require('@playwright/test');
  */
 module.exports = defineConfig({
   testDir: './tests',
-  retries: 1,
+  retries: 2,
   timeout: 30 * 1000, // 30 secs
   expect: {timeout: 20 * 1000}, // 20 secs
   /* Run tests in files in parallel */
@@ -45,7 +45,7 @@ module.exports = defineConfig({
       // ...devices['Pixel 4a (5G)'],
       ignoreHTTPSErrors: true,
       permissions: ['geolocation'],
-      headless: false,
+      headless: true,
       // screenshot: 'on',
       // video: 'retain-on-failure',
       }

@@ -14,6 +14,9 @@ class OrderSummary {
     // .table-bordered .ng-star-inserted th[scope=row]
 
     const itemCount = await table.locator("th[scope=row]").count();
+    console.log("itemCount ",itemCount);
+    console.log("orderID ",orderID);
+    console.log("productName ",productName);
 
     for (let j = 0; j < itemCount; ++j) {
       let tmp = await table.nth(j).locator("th[scope=row]").nth(j).textContent();

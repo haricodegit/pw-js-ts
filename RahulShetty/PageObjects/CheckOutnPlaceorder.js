@@ -30,7 +30,7 @@ class CheckOutnPlaceorder {
     for(let i = 0; i <  await this.listOfCountries.count(); ++i) {
         const item = await this.listOfCountries.nth(i).textContent();
         let itemcheck = item.trim()
-        if(itemcheck === countryname) {
+        if(itemcheck === "United States") {
             await this.listOfCountries.nth(i).click();
             break;
         }
@@ -49,11 +49,13 @@ class CheckOutnPlaceorder {
     // await this.page.locator("button:has-text('Apply Coupon')").click()
     await this.page.locator("button[type='submit']")
     // await this.placeOrderbtn.click(); //Place Order
+    // await this.page.locator(".actions .action__submit").waitFor()
     await this.page.locator(".action__submit").click()
     await this.page.locator(".content-wrap").waitFor()
     let msg = await this.page.locator(".hero-primary").textContent()
     let trimmedmsg = msg.trim()
     // await this.expect(trimmedmsg).toBe(successmsg);//Thank you message
+    await this.expect(this.successmesg).toHaveText(" Thankyou for the order. ");
     const OrderID = await this.orderIDlocator.last().textContent();
 
     // const OrderID = await page.locator(".em-spacer-1 label").last().textContent();

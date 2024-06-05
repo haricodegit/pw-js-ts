@@ -4,14 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/webApiPart1.spec.js"
+    "test": "npx playwright test tests/webApiPart1.spec.js",
+    "regression": "npx playwright test",
+    "WebTest": "npx playwright test --grep '@Web'",
+    "DiffConfig": "npx playwright test --config=playwright.config1.js --project=webkit --grep='@Web'"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@playwright/test": "^1.43.1",
+    "@playwright/test": "^1.44.1",
     "@types/node": "^20.12.7",
+    "allure-playwright": "^2.15.1",
     "exceljs": "^4.4.0"
+  },
+  "dependencies": {
+    "@cucumber/cucumber": "^10.8.0"
   }
 }

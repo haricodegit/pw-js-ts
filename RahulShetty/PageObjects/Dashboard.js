@@ -8,6 +8,7 @@ class Dashboard {
     this.cart = page.locator("[routerlink*='cart']")
     this.myCartLabel = page.locator(".heading h1")
     this.myCart = "My Cart"
+    this.itemName = page.locator("div li h3")
   }
 
   async searchProductAddtoCart(productName) {
@@ -23,7 +24,7 @@ class Dashboard {
     // await this.page.waitForLoadState("networkidle");
   }
 
-  async navigateToCart() {
+  async navigateToCart(productName) {
     // await this.cart.click();
     // .btn-custom i
     // await this.page.locator("[routerlink*='cart']").click();
@@ -38,6 +39,7 @@ class Dashboard {
 
     await this.page.locator("[routerlink*='cart']").click();
     await this.page.locator("div li").first().waitFor();
+    await this.expect(this.itemName).toHaveText(productName)
     // await this.page.waitForLoadState("networkidle");
   }
 }
