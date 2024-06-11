@@ -7,7 +7,8 @@
     "test": "npx playwright test tests/webApiPart1.spec.js",
     "regression": "npx playwright test",
     "WebTest": "npx playwright test --grep '@Web'",
-    "DiffConfig": "npx playwright test --config=playwright.config1.js --project=webkit --grep='@Web'"
+    "DiffConfig": "npx playwright test --config=playwright.config1.js --project=webkit --grep='@Web'",
+    "CucumberRegression": "npx cucumber-js features/parallel.feature --exit --format html:cucumber-report.html --retry 1 --parallel 2"
   },
   "keywords": [],
   "author": "",
