@@ -70,3 +70,24 @@ Then(
     await ordersummary.verifyOrderSummary(OrderID, ProductName);
   }
 );
+
+Given('User Invalid Credentials login Ecom App with {string} and {string}', async function (InvalidUserName, InvalidPassword) {
+  // Write code here that turns the phrase above into concrete actions
+    const userName = this.page.locator('#username');
+    const loginBtn = this.page.locator('#signInBtn');
+    await this.page.goto("https://rahulshettyacademy.com/loginpagePractise/");
+    // console.log(await page.title());
+    expect(this.page).toHaveTitle("LoginPage Practise | Rahul Shetty Academy");
+
+    await userName.fill(InvalidUserName);
+    await this.page.locator("input[type='password']").fill(InvalidPassword);
+    await loginBtn.click();
+    // console.log(await errormesg.textContent());
+    
+});
+
+Then('Invalid Credentials error displayed', async function () {
+  // Write code here that turns the phrase above into concrete actions
+  const errormesg = this.page.locator("[style*='block']");
+  await expect(errormesg).toContainText("Incorrect");  //keyword partial text is enough
+});
