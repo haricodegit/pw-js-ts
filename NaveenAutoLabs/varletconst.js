@@ -28,4 +28,3 @@ console.log(100*weekday);
 //Reinitilization of const variable
 // weekday = 10;
 // console.log(100*weekday);
-
