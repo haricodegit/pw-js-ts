@@ -3,13 +3,8 @@ const { brotliCompress } = require('zlib');
 
 test("Clean Up Orders Page", async({page}) => {
 
-<<<<<<< HEAD
-    const emailID = "resttassuredd@gmail.com";
-    // const emailID = "restassured@gmail.com";
-=======
     // const emailID = "resttassuredd@gmail.com";
     const emailID = "restassured@gmail.com";
->>>>>>> b94eeeefe518dc39826667d4acb3bcfdaa82f07e
     await page.goto("https://rahulshettyacademy.com/client");
     await page.locator("#userEmail").fill(emailID);
     await page.locator("#userPassword").fill("Welcome@123");
