@@ -1,0 +1,63 @@
+*******Microsoft playwright automation testing interview questions*******
+
+JavaScript automation testing interview questions
+
+Preparing for a Microsoft Playwright automation testing interview involves understanding both the 
+Playwright framework and general automation testing concepts. Here are some questions you might encounter, 
+along with explanations and tips for answering them:
+
+Basic Playwright Questions
+What is Playwright and how does it differ from other automation tools like Selenium?
+
+Playwright is a Node.js library to automate Chromium, Firefox, and WebKit browsers with a single API. 
+Unlike Selenium, which supports a wide range of browsers, Playwright focuses on modern web apps by supporting 
+new browser capabilities like context isolation and multiple tabs. Playwright also provides better support 
+for handling modern web features such as single-page applications.
+How do you install and set up Playwright in a new project?
+
+To install Playwright, you run npm install @playwright/test. Setting up involves creating a 
+Playwright configuration file and writing your test cases. The command npx playwright install 
+installs the required browsers.
+Can you explain the concept of browser contexts in Playwright?
+
+Browser contexts allow you to create isolated browser sessions. They are akin to incognito sessions and enable running multiple tests simultaneously in a single browser instance without sharing state, cookies, or cache.
+What is the role of selectors in Playwright and how do you use them?
+
+Selectors in Playwright are used to identify elements on a web page. Playwright supports CSS selectors, XPath, text selectors, and more. For example, await page.click('text="Sign in"') clicks an element containing the text "Sign in".
+How do you handle network interceptions and modify requests/responses in Playwright?
+
+Playwright allows you to intercept and modify network requests and responses. This can be achieved using page.route to handle requests and page.on('response') to listen to responses. This is useful for mocking API responses in tests.
+Advanced Playwright Questions
+How would you test a single-page application (SPA) using Playwright?
+
+For SPAs, you need to ensure that navigation and dynamic content are correctly tested. This involves using Playwright’s waitForNavigation, waitForSelector, and waitForLoadState methods to handle asynchronous loading and state changes.
+What strategies do you use to ensure your Playwright tests are reliable and not flaky?
+
+To avoid flaky tests, use explicit waits, handle all possible asynchronous behavior correctly, and ensure proper isolation of tests using browser contexts. Utilize Playwright's robust retry mechanisms and proper teardown processes to maintain state cleanliness.
+Explain how you can integrate Playwright with a CI/CD pipeline.
+
+Integrating Playwright with CI/CD involves setting up your test scripts in your pipeline configuration file (e.g., Jenkinsfile, GitHub Actions YAML, GitLab CI). Ensure the environment has the necessary dependencies and browsers installed. Playwright provides CLI tools for headless execution, which is useful for CI/CD environments.
+How do you handle authentication in Playwright tests?
+
+For authentication, you can either automate the login process in each test or reuse authentication state. Playwright allows saving the authenticated state to a file and reloading it in different tests using context.storageState().
+What are the common challenges you face while writing Playwright tests and how do you overcome them?
+
+Common challenges include handling dynamic content, dealing with iframes, and managing timeouts. Solutions involve using Playwright’s built-in waiting mechanisms, proper selectors, and frame handling methods. Debugging tools like Playwright Inspector can help visualize and debug tests.
+General Automation Testing Questions
+What are the benefits of automated testing compared to manual testing?
+
+Automated testing provides faster feedback, repeatability, consistency, and the ability to run tests at scale. It reduces human error and can be integrated into CI/CD pipelines for continuous testing.
+How do you ensure your test coverage is adequate?
+
+Ensuring adequate test coverage involves creating a comprehensive test plan, prioritizing test cases based on risk, and using code coverage tools to identify untested paths. Regularly reviewing and updating test cases as the application evolves is also crucial.
+Explain the concept of test-driven development (TDD) and how it relates to automation testing.
+
+TDD is a software development approach where tests are written before writing the actual code. It ensures that the codebase is always tested and leads to better-designed, more reliable, and maintainable code. Automation testing is integral to TDD, as tests must be executed frequently and automatically.
+How do you handle flaky tests?
+
+Flaky tests can be managed by identifying the root cause, such as synchronization issues, environment instability, or test dependencies. Implementing retries, increasing timeouts, and improving test isolation can reduce flakiness. Regularly reviewing and refactoring tests also helps.
+Tips for the Interview
+Be hands-on: Demonstrate familiarity with Playwright by discussing specific examples or experiences from past projects.
+Understand the concepts: Show a solid understanding of both basic and advanced Playwright functionalities.
+Keep learning: Stay updated with the latest features and best practices in Playwright and automation testing.
+By preparing answers to these questions and practicing writing and running Playwright tests, you’ll be well-equipped for a Playwright automation testing interview.
