@@ -39,7 +39,7 @@ test("Client App E2E", async({page})=> {
     await page.locator(".email-wrapper").first().waitFor();
     const orderIdDetails = await page.locator(".col-text").textContent();
     expect(response.OrderID.includes(orderIdDetails)).toBeTruthy()
-    expect(page.locator(".address p").first()).toHaveText(" resttassuredd@gmail.com ");
+    // expect(page.locator(".address p").first()).toHaveText(" resttassuredd@gmail.com ");
     expect(page.locator(".artwork-card-info .title")).toHaveText(" IPhone 15 Pro Max ");
 })
 

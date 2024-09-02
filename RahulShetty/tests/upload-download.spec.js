@@ -30,7 +30,7 @@ async function readExcel(worksheet, searchText) {
 test("Upload-download file validations", async({page})=> {
     const textSearch = 'Mango'
     const updateValue = '350'
-    const fpath = "C:/Users/harish.arumugam/Downloads/download.xlsx"
+    const fpath = "C:/Users/HARISH A/Downloads/download.xlsx"
     await page.goto("https://rahulshettyacademy.com/upload-download-test/index.html")
     await page.waitForLoadState('networkidle')
     // await page.locator('#downloadButton').waitFor()
