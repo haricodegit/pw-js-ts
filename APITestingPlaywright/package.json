@@ -2,7 +2,10 @@
   "name": "apitestingplaywright",
   "version": "1.0.0",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+      "apiTests": "npx playwright test --grep 'API' --workers=1",
+      "Test1": "npx playwright test --workers=1"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",

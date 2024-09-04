@@ -5,7 +5,7 @@ import postRequestDynamicJSONBody from '../test-data/postRequestDynamicBody.json
 import { stringFormat } from '../utils/common'
 import { faker } from '@faker-js/faker'
 
-test("Query Parameters in Playwright", async({ request }) => {
+test("API Query Parameters in Playwright", async({ request }) => {
 
     const firstName = faker.person.firstName('female')
     const lastName = faker.person.lastName('female')
