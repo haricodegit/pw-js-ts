@@ -32,10 +32,10 @@ test('Get all the Booking Ids from the server and Delete them', async( { request
             }
         })
 
-        expect(deleteResponse.statusText('Created'))
-        expect(deleteResponse.status()).toBe(201)
+        expect.soft(deleteResponse.statusText('Created'))
+        expect.soft(deleteResponse.status()).toBe(201)
         TotalDeletedCount++
-        break
+        // break
     }
 
     console.log('TotalDeletedCount', TotalDeletedCount);
