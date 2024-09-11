@@ -3,8 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-      "apiTests": "npx playwright test --grep 'API' --workers=1",
-      "Test1": "npx playwright test --workers=1"
+    "apiTests": "npx playwright test --grep 'API' --workers=1",
+    "Test1": "npx playwright test --workers=1"
   },
   "keywords": [],
   "author": "",
@@ -16,6 +16,7 @@
     "@types/node": "^22.5.1"
   },
   "dependencies": {
-    "luxon": "^3.5.0"
+    "luxon": "^3.5.0",
+    "mongodb": "^6.8.1"
   }
 }

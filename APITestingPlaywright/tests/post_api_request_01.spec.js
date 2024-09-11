@@ -2,6 +2,8 @@
 const {test, expect} = require('@playwright/test');
 const exp = require('constants');
 
+const { insertDocument, fetchDocuments } = require('../utils/mongoUtils')
+
 // import { test, expect } from '@playwright/test';
 // import exp from 'constants';
 
@@ -25,6 +27,7 @@ test('Create POST API Request using static request body',async({request}) => {
 
     const postRequestApiResponseBody = await postRequestApiResponse.json()
     console.log('postRequestApiResponseBody',postRequestApiResponseBody);
+    await insertDocument(postRequestApiResponseBody);
     // console.log('postRequestApiResponse', postRequestApiResponse);
 
 // Validate status code
