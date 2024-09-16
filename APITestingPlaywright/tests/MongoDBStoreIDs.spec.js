@@ -2,7 +2,7 @@ const { test, expect } = require('@playwright/test');
 
 const { insertManyDocuments } = require('../utils/mongoUtils')
 
-test('Get all the booking IDs and store in Mongo DB', async({ request }) => {
+test('API Get all the booking IDs and store in Mongo DB', async({ request }) => {
 
     const getBookingIDsResponse = await request.get('/booking');
     expect(getBookingIDsResponse.ok()).toBeTruthy();
@@ -13,6 +13,6 @@ test('Get all the booking IDs and store in Mongo DB', async({ request }) => {
     // BSONdocument = JSON.parse(BSONdocument);
     let arry = [];
     arry = getBookingIDsResponseBody;
-    console.log("Length",arry.length);
+    // console.log("Length",arry.length);
     await insertManyDocuments(getBookingIDsResponseBody);
 });

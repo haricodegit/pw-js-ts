@@ -37,7 +37,7 @@ test('Create POST API request using dynamic request body', async({request}) => {
     expect(postRequestAPIResponse.ok()).toBeTruthy()
     expect(postRequestAPIResponse.status()).toBe(200)
 
-    console.log("postRequestAPIResponseBody", postRequestAPIResponseBody);
+    // console.log("postRequestAPIResponseBody", postRequestAPIResponseBody);
 
     expect(postRequestAPIResponseBody.booking).toHaveProperty('firstname',firstName)
     expect(postRequestAPIResponseBody.booking).toHaveProperty('lastname',lastName)

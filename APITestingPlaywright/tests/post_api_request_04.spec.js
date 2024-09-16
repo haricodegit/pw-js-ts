@@ -10,7 +10,7 @@ import { stringFormat } from '../utils/common'
 // const { stringFormat } = require('../utils/common')
 import exp from 'constants'
 
-test('Create POST API request using dynamic JSON file', async({ request }) => {
+test.skip('Create POST API request using dynamic JSON file', async({ request }) => {
 
     for(let i =0; i<1000; i++) {
     const firstName = faker.person.firstName('female')
@@ -39,5 +39,5 @@ test('Create POST API request using dynamic JSON file', async({ request }) => {
 
     await insertSingleDocument(postRequestResponseBody);
 }
-console.log('Completed 1000 bookings');
+// console.log('Completed 1000 bookings');
 })

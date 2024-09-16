@@ -1,6 +1,7 @@
 const { test, expect } = require('@playwright/test')
 
 import { faker } from '@faker-js/faker';
+import { DateTime } from 'luxon';
 import dynamicRequestPayload from '../test-data/postRequestDynamicBody.json'
 import generateTokenPayload from '../test-data/generateTokenPayload.json'
 import patchRequestPayload from '../test-data/patchRequestPayload.json';
@@ -9,12 +10,16 @@ import exp from 'constants';
 
 test('Patch API Request in Playwright ', async({ request }) => {
 
-    console.log('===Create Booking===');
+    // console.log('===Create Booking===');
     const firstName = faker.person.firstName('female')
     const lastName = faker.person.lastName('female')
+    let totalPrice = faker.finance.amount({min: 1000, max: 5000, dec: 0})
+    totalPrice = Number(totalPrice)
+    const checkIn = DateTime.now().toFormat('yyyy-MM-dd')
+    const checkOut = DateTime.now().plus({ days: 5}).toFormat('yyyy-MM-dd')
     const additionalNeeds = faker.color.rgb()
 
-    const postRequestPayload = stringFormat(JSON.stringify(dynamicRequestPayload), firstName, lastName, additionalNeeds)
+    const postRequestPayload = stringFormat(JSON.stringify(dynamicRequestPayload), firstName, lastName, totalPrice, checkIn, checkOut, additionalNeeds)
 
     const postRequestResponse = await request.post('/booking', {
         data: JSON.parse(postRequestPayload)
@@ -24,9 +29,9 @@ test('Patch API Request in Playwright ', async({ request }) => {
     expect(postRequestResponse.status()).toBe(200)
 
     const postRequestResponseBody = await postRequestResponse.json()
-    console.log('postRequestResponseBody', postRequestResponseBody);
+    // console.log('postRequestResponseBody', postRequestResponseBody);
 
-    console.log('===Get Booking Details===');
+    // console.log('===Get Booking Details===');
 
     const bId = postRequestResponseBody.bookingid
 
@@ -36,7 +41,7 @@ test('Patch API Request in Playwright ', async({ request }) => {
     expect(getRequestResponse.ok()).toBeTruthy()
     expect(getRequestResponse.status()).toBe(200)
 
-    console.log("getRequestResponseBody", await getRequestResponse.json());
+    // console.log("getRequestResponseBody", await getRequestResponse.json());
 
     const generateTokenResponse = await request.post('/auth', {
         data: generateTokenPayload
@@ -48,7 +53,7 @@ test('Patch API Request in Playwright ', async({ request }) => {
 
     const generateTokenResponseBody = await generateTokenResponse.json()
     const TokenNo = generateTokenResponseBody.token
-    console.log('TokenNo, ', TokenNo);
+    // console.log('TokenNo, ', TokenNo);
 
     const patchRequestResponse = await request.patch(`booking/${TokenNo}`, {
         headers: {
@@ -58,12 +63,12 @@ test('Patch API Request in Playwright ', async({ request }) => {
         data: patchRequestPayload
     })
 
-    console.log('patchRequestResponse', patchRequestResponse);
+    // console.log('patchRequestResponse', patchRequestResponse);
     expect(patchRequestResponse.ok()).toBeTruthy()
     // expect(patchRequestResponse.statusText('Forbidden'))
     expect(patchRequestResponse.status()).toBe(200)
 
     const patchRequestResponseBody = await patchRequestResponse.json()
-    console.log('patchRequestResponseBody', patchRequestResponseBody);
+    // console.log('patchRequestResponseBody', patchRequestResponseBody);
 
-})
+});

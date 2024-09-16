@@ -12,7 +12,7 @@ test('Get all the Booking Ids from the server and Delete them', async( { request
     let allBookIdsArray = []
     allBookIdsArray = allBookingIDsResponseBody
 
-    console.log('Tobe--DeletedCount', allBookIdsArray.length);
+    // console.log('Tobe--DeletedCount', allBookIdsArray.length);
 
     const TokenResponse = await request.post('/auth', {
         data: generateTokenPayload
@@ -38,5 +38,5 @@ test('Get all the Booking Ids from the server and Delete them', async( { request
         // break
     }
 
-    console.log('TotalDeletedCount', TotalDeletedCount);
+    // console.log('TotalDeletedCount', TotalDeletedCount);
 })

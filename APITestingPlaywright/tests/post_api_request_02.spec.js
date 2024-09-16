@@ -18,6 +18,6 @@ test('Create POST API request using static JSON file', async({request})  => {
     expect(postrequestAPIResponseBody.booking).toHaveProperty('firstname','Micheal')
     expect(postrequestAPIResponseBody.booking.bookingdates).toHaveProperty('checkin','2024-09-01')
 
-    console.log('postrequestAPIResponseBody', postrequestAPIResponseBody);
+    // console.log('postrequestAPIResponseBody', postrequestAPIResponseBody);
 
 })
