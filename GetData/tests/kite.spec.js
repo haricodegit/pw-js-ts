@@ -28,7 +28,7 @@ test('get Data', async () => {
   const fs = require('fs');
 
 // Create a writable stream for the log file
-const logStream = fs.createWriteStream('KiteBNSpotNovMonth.txt', { flags: 'a' });
+const logStream = fs.createWriteStream('BNFutTwoDays.txt', { flags: 'a' });
 
 // Override the console.log function
 console.log = function (message) {

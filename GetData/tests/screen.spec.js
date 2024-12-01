@@ -7,7 +7,7 @@ import {
 test('get Data',async () => {
     const browser = await chromium.launch({ headless: false });
     const context = await browser.newContext({
-        viewport: { width: 1800, height: 1020 } // Set viewport size to Full HD
+        viewport: { width: 1500, height: 900 } // Set viewport size to Full HD
     });
     const page = await context.newPage();
 
