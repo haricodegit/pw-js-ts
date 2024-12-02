@@ -18,12 +18,12 @@ test('get Data', async ({
   // cq-hu-static
 
   // Print frame details
-  // console.log(`Number of frames: ${frames.length}`);
-  // frames.forEach((frame, index) => {
-  //     console.log(`Frame ${index + 1}:`);
-  //     console.log(`  Name: ${frame.name()}`);
-  //     console.log(`  URL: ${frame.url()}`);
-  // });
+  console.log(`Number of frames: ${frames.length}`);
+  frames.forEach((frame, index) => {
+      console.log(`Frame ${index + 1}:`);
+      console.log(`  Name: ${frame.name()}`);
+      console.log(`  URL: ${frame.url()}`);
+  });
     // const frame = page.frame( {url: 'https://groww.in/charts/futures/nifty-bank/BANKNIFTY24NOVFUT?exchange=NSE'});
     // const frame = page.frame({ url: /https:\/\/groww\.in\/charts\/futures\/nifty-bank\/BANKNIFTY24NOVFUT\?exchange=NSE/ });
 
@@ -36,7 +36,7 @@ test('get Data', async ({
     let Close = await dynamicFrame.locator('cq-hu-static div cq-hu-close').textContent();
     let DateTime = await dynamicFrame.locator('cq-hu-static div cq-hu-date').textContent();
 
-    // console.log(Open,',',High,',',Low,',',Close,',',DateTime);
+    // console.log(Open,',',High,',',Low,',',Close,',',DateTime);SSSSS
     console.log(Open,High,Low,Close,DateTime);
 
 // let temp;

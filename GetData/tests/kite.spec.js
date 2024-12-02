@@ -28,7 +28,7 @@ test('get Data', async () => {
   const fs = require('fs');
 
 // Create a writable stream for the log file
-const logStream = fs.createWriteStream('BNFutTwoDays.txt', { flags: 'a' });
+const logStream = fs.createWriteStream('FY2024.txt', { flags: 'a' });
 
 // Override the console.log function
 console.log = function (message) {
@@ -44,7 +44,7 @@ console.log = function (message) {
   const frames = newPage.frames();
   const dynamicFrame = frames.find(frame => frame.name().includes('chart-iframe'));
 
-  await newPage.waitForTimeout(60000);
+  await newPage.waitForTimeout(90000);
 
   await dynamicFrame.locator('cq-hu-static').waitFor({state: 'attached'});
 
